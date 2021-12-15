@@ -9,12 +9,12 @@ const mongoose = require("mongoose");
 
 
 // MONGODB CLOUD CONNECT
-// const uri = "mongodb+srv://sahil:root@404@cluster0.kzey4.mongodb.net/CoronaDb?retryWrites=true&w=majority";
-// mongoose.connect(uri, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true
-//   }).then(() => {
-//     console.log('MongoDB Atlas Connected…');
-//   })
-//   .catch(err => console.log(err));
+ mongodb+srv://sahil:sahil123@cluster0.kzey4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority;
+ mongoose.connect(uri, {
+     useNewUrlParser: true,
+     useUnifiedTopology: true,
+     useCreateIndex: true
+   }).then(() => {
+     console.log('MongoDB Atlas Connected…');
+   })
+   .catch(err => console.log(err));
