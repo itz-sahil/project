@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 
 
 // MONGODB CLOUD CONNECT
- mongodb+srv://sahil:sahil123@cluster0.kzey4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority;
+const uri = "mongodb+srv://sahil:sahil123@cluster0.kzey4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
  mongoose.connect(uri, {
      useNewUrlParser: true,
      useUnifiedTopology: true,
