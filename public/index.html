@@ -204,12 +204,13 @@
                 <div class="form-group col-md-6" style="padding-left: 0px;">
                   <label>Mobile Number</label>
                   <i class="fa fa-mobile"></i>
-                  <input type="number" class="form-control" name="mobile"  placeholder="Enter 10 digits mobile number" autocomplete="off" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" minlength="10" maxlength ="10" required >
+                  <input type="number" class="form-control" name="mobile" id="mobile" onblur="NumberValidate();"  placeholder="Enter 10 digits mobile number" pattern="[0-9]{10}" autocomplete="off" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" minlength="10" maxlength ="10" required >
                 </div> 
                 <div class="form-group col-md-6">
                   <label for="exampleFormControlInput1">Aadhar Number </label>
                   <i class="fa fa-id-card-o"></i>
-                  <input type="text" class="form-control" name="aadhar" id="tbNum"  placeholder="XXXX-XXXX-XXXX" autocomplete="off" onkeypress="addHyphen(this)" oninput="validation()" minlength="14" maxlength="14" required>
+                  <!-- <input type="number" class="form-control" name="aadhar" id="tbNum"  placeholder="XXXX-XXXX-XXXX" autocomplete="off" onkeypress="addHyphen(this)" oninput="validation()" minlength="14" maxlength="14" required> -->
+                  <input type="tel" class="form-control" name="aadhar" id="tbNum" onblur="AadharValidate();" placeholder="XXXX XXXX XXXX" pattern="[0-9]{12}" autocomplete="off" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="12" required>
                 </div>
               </div>
 
@@ -281,7 +282,7 @@
                 </div>
                 <div class="form-group col-md-4">
                   <label" for="inputAge">Age</label>
-                  <input type="number" class="form-control" name="age" id="inputAge" min="1" max="125" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3"  required style="margin-top: 8px;">
+                  <input type="number" class="form-control" name="age" id="inputAge" min="12" max="125" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3"  required style="margin-top: 8px;">
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputDose">Select Dose</label>
@@ -347,7 +348,7 @@
     <!-- FOOTER -->
     <footer class="mt-5">
       <div class="footer_style text-white text-center container-fluid">
-        <p> Copyright by Sahil, Abdurrahman & Jawad </p>
+        <p> Copyright by Sahil </p>
       </div>
     </footer>
 

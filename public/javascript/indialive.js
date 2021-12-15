@@ -44,24 +44,43 @@ function fetch()
     );
 }
 
-function validation() {
-    var regexp = /^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/;
-    var x = document.getElementById("aadhar").value;
-    if (regexp.test(x)) {
-        alert("Valid Aadhar no.");
+//Function to validate Mobile Number
+function NumberValidate() {
+    var number = document.getElementById("mobile").value;
+    var mobileTenDigit = /^\d{10}$/;
+    if (number != '') {
+        if (number.match(mobileTenDigit)) {
+            return true;
+        }
+        else {
+            alert("Enter valid Mobile Number");
+            return false;
+        }
     }
-    else {
-        alert("Invalid Aadhar no.");
+}
+
+//Function to validate Aadhar Number
+function AadharValidate() {
+    var aadhar = document.getElementById("tbNum").value;
+    var adharcardTwelveDigit = /^\d{12}$/;
+    if (aadhar != '') {
+        if (aadhar.match(adharcardTwelveDigit)) {
+            return true;
+        }
+        else {
+            alert("Enter valid Aadhar Number");
+            return false;
+        }
     }
 }
 
 // ADD HYPEN IN AADHAR INPUT
-function addHyphen(element) {
-    let ele = document.getElementById(element.id);
-    ele = ele.value.split('-').join('');    // Remove dash (-) if mistakenly entered.
-    let finalVal = ele.match(/.{1,4}/g).join('-');
-    document.getElementById(element.id).value = finalVal;
-}
+// function addHyphen(element) {
+//     let ele = document.getElementById(element.id);
+//     ele = ele.value.split('-').join('');    // Remove dash (-) if mistakenly entered.
+//     let finalVal = ele.match(/.{1,4}/g).join('-');
+//     document.getElementById(element.id).value = finalVal;
+// }
 
 // FUNCTION TO RESTRICT PAST DATE
 $(function () 
@@ -84,17 +103,6 @@ $(function ()
         $('#date').attr('min', minDate);
     }
 );
-
-// // FUNCTION TO VALIDATE DATE
-// function checkDate() 
-// {
-//     var selectedDate = document.getElementById('date').value;
-//     var now = new Date();
-//     if (selectedDate < now) 
-//     {
-//         alert("Date must be in the future");
-//     }
-// }
 
 // $('.count div h1').counterUp({
 //   delay:10,
