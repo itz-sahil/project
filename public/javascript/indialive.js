@@ -1,6 +1,6 @@
 function fetch() 
 {
-    $.get("https://cors-anywhere.herokuapp.com/https://api.covid19india.org/data.json",
+    $.get("https://api.covid19india.org/data.json",
         function (data) 
         {
             document.getElementById('count1').innerHTML = data['statewise'][0]['confirmed'];
