@@ -1,7 +1,7 @@
 // FUNCTION TO FETCH DATA FROM API
 function fetch()
 {
-    $.get("https://cors-anywhere.herokuapp.com/https://api.covid19api.com/summary",function (data)
+    $.get("https://api.covid19api.com/summary",function (data)
         {
             var tbval = document.getElementById('tbval');
             for (var i = 1; i < (data['Countries'].length); i++)
